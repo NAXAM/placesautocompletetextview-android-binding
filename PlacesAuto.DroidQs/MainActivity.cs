@@ -39,7 +39,6 @@ namespace Naxam.PlacesAuto.DroidQs
 			mZip = FindViewById<TextView>(Resource.Id.zip);
 
 			mAutocomplete.SetOnPlaceSelectedListener(this);
-			mAutocomplete.SetOnPlaceSelectedListener(this);
 		}
 
 		void IOnPlaceSelectedListener.OnPlaceSelected(Place place)
