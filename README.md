@@ -11,7 +11,7 @@ to provide location results and caches selected results in a history file for la
 The `PlacesAutocompleteTextView` is available on Nuget.org
 
 ```
-
+Install-Package Naxam.SeatGeek.PlacesAutocompleteTextView
 ```
 
 ### Basic setup and usage

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Naxam.SeatGeek.PlacesAutocompleteTextView</id>
+       <version>0.2.2017.2</version>
+        <description>Android binding library for native library PlacesAutocompleteTextView</description>
+        <authors>Vu Duc Tuyen</authors>
+        <owners>NAXAM CO.,LTD</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+        <!-- Optional elements -->
+        <title>Naxam - SeatGeek PlacesAutocompleteTextView</title>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/NAXAM/xam-android-PlacesAutocompleteTextView</projectUrl>
+        <copyright>2017 (c) NAXAM</copyright>
+        <tags>Xamarin.Android, PlacesAutocompleteTextView</tags>
+        <dependencies>
+            <dependency id="Xamarin.GooglePlayServices.Places" version="42.1001.0" />
+        </dependencies>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <file src="PlacesAuto.Droid/bin/Release/Naxam.PlacesAuto.Droid.dll" target="lib/MonoAndroid10/Naxam.PlacesAuto.Droid.dll" />
+        <file src="PlacesAuto.Droid/bin/Release/Naxam.PlacesAuto.Droid.xml" target="lib/MonoAndroid10/Naxam.PlacesAuto.Droid.xml" />
+        <!--<file src="PlacesAuto.Droid/bin/Release/Naxam.PlacesAuto.Droid.pdb" target="lib/MonoAndroid10/Naxam.PlacesAuto.Droid.pdb" />-->
+    </files>
+</package>
