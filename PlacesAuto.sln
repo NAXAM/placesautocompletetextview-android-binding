@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesAuto.Droid", "PlacesAuto.Droid\PlacesAuto.Droid.csproj", "{5C26359B-AEB6-4018-B3D7-C09904DE4F90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.PlacesAuto.Droid", "PlacesAuto.Droid\Naxam.PlacesAuto.Droid.csproj", "{5C26359B-AEB6-4018-B3D7-C09904DE4F90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesAuto.DroidQs", "PlacesAuto.DroidQs\PlacesAuto.DroidQs.csproj", "{7E23F3BE-8F51-4065-B84D-12594543EE18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.PlacesAuto.DroidQs", "PlacesAuto.DroidQs\Naxam.PlacesAuto.DroidQs.csproj", "{7E23F3BE-8F51-4065-B84D-12594543EE18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

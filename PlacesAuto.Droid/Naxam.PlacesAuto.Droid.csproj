@@ -4,16 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E23F3BE-8F51-4065-B84D-12594543EE18}</ProjectGuid>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{5C26359B-AEB6-4018-B3D7-C09904DE4F90}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>PlacesAuto.DroidQs</RootNamespace>
-    <AssemblyName>PlacesAuto.DroidQs</AssemblyName>
+    <RootNamespace>Naxam.PlacesAuto.Droid</RootNamespace>
+    <AssemblyName>Naxam.PlacesAuto.Droid</AssemblyName>
     <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
-    <AndroidApplication>True</AndroidApplication>
-    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
@@ -27,7 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,15 +59,6 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
-      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
-      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.25.1.0\lib\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Basement">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.42.1001.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Basement.dll</HintPath>
     </Reference>
@@ -88,35 +76,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="Jars\AboutJars.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <LibraryProjectZip Include="Jars\placesautocomplete-0.2-20170120.185536-2.aar" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PlacesAuto.Droid\PlacesAuto.Droid.csproj">
-      <Project>{5C26359B-AEB6-4018-B3D7-C09904DE4F90}</Project>
-      <Name>PlacesAuto.Droid</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Core.UI.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Core.UI.targets')" />
@@ -124,9 +99,6 @@
   <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Media.Compat.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Fragment.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Fragment.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.v4.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.v4.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Vector.Drawable.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.25.1.0\build\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.targets')" />
   <Import Project="..\packages\Xamarin.GooglePlayServices.Basement.42.1001.0\build\MonoAndroid70\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Basement.42.1001.0\build\MonoAndroid70\Xamarin.GooglePlayServices.Basement.targets')" />
   <Import Project="..\packages\Xamarin.GooglePlayServices.Tasks.42.1001.0\build\MonoAndroid70\Xamarin.GooglePlayServices.Tasks.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Tasks.42.1001.0\build\MonoAndroid70\Xamarin.GooglePlayServices.Tasks.targets')" />
   <Import Project="..\packages\Xamarin.GooglePlayServices.Base.42.1001.0\build\MonoAndroid70\Xamarin.GooglePlayServices.Base.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Base.42.1001.0\build\MonoAndroid70\Xamarin.GooglePlayServices.Base.targets')" />

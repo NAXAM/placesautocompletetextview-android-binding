@@ -7,4 +7,17 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete']" name="managedName">SeatGeek.PlacesAutocomplete</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.adapter']" name="managedName">SeatGeek.PlacesAutocomplete.Adapter</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.async']" name="managedName">SeatGeek.PlacesAutocomplete.Async</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.history']" name="managedName">SeatGeek.PlacesAutocomplete.History</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.json']" name="managedName">SeatGeek.PlacesAutocomplete.Json</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.model']" name="managedName">SeatGeek.PlacesAutocomplete.Model</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.network']" name="managedName">SeatGeek.PlacesAutocomplete.Network</attr>
+  <attr path="/api/package[@name='com.seatgeek.placesautocomplete.util']" name="managedName">SeatGeek.PlacesAutocomplete.Util</attr>
+	
+  <remove-node path="/api/package[@name='com.seatgeek.placesautocomplete']/class[@name='PlacesAutocompleteTextView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='T']]" />
+  <remove-node path="/api/package[@name='com.seatgeek.placesautocomplete']/class[@name='PlacesAutocompleteTextView']/method[@name='setOnItemClickListener' and count(parameter)=1 and parameter[1][@type='android.widget.AdapterView.OnItemClickListener']]" />
+  <remove-node path="/api/package[@name='com.seatgeek.placesautocomplete']/class[@name='PlacesAutocompleteTextView']/method[@name='setOnItemSelectedListener' and count(parameter)=1 and parameter[1][@type='android.widget.AdapterView.OnItemSelectedListener']]" />
+  <remove-node path="/api/package[@name='com.seatgeek.placesautocomplete']/class[@name='PlacesAutocompleteTextView']/field[@name='DEBUG']" />
 </metadata>

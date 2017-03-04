@@ -1,17 +1,17 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using Android.App;
 
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("PlacesAuto.DroidQs")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Naxam.PlacesAuto.DroidQs")]
+[assembly: AssemblyDescription("Demo app for Android binding library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("(c) Vu Duc Tuyen")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("NAXAM COMPANY LIMITED")]
+[assembly: AssemblyProduct("OSS")]
+[assembly: AssemblyCopyright("2017 (c) NAXAM")]
+[assembly: AssemblyTrademark("NAXAM")]
 [assembly: AssemblyCulture("")]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
